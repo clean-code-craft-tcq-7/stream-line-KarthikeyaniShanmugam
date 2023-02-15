@@ -12,7 +12,7 @@ class generateTester(unittest.TestCase):
         except:
             return False
     def test(self):  
-        outFormatter = OutputFormatter.OutputFormatter()
+        outFormatter = OutputFormatter()
         self.assertTrue(self.is_valid(outFormatter.formatOutput({'SOC':20,'T':-1})))
 if __name__ == '__main__':
     unittest.main()
