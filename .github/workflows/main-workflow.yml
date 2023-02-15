@@ -26,9 +26,7 @@ jobs:
           flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
       - name: Run and collect coverage
         run: |
-          cd ../Sender/test
-          pwd
-          coverage run -m 
+          coverage run -m pytest
           coverage html
           coverage report
       - name: Upload coverage
