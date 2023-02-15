@@ -1,6 +1,6 @@
 import unittest
 import json
-from src import OutputFormatter
+from OutputFormatter import *
 
 class generateTester(unittest.TestCase):
     # function to check for JSON String validity

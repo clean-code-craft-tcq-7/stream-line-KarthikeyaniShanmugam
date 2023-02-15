@@ -1,6 +1,6 @@
 import unittest
 
-from src import DataGenerator
+from DataGenerator import *
 
 
 class generateTester(unittest.TestCase):
