@@ -5,11 +5,13 @@ from SenderMain import *
 class SenderMainTester(unittest.TestCase):
     def test(self):  
         stub = StubCode()
-        sender = Sender(generator = stub ,formatter = stub ,printerFunction = stub.stubPrintToConsole)
+        sender = Sender(generatorFunction = stub.generateBatteryData ,formatterFunction = stub.formatOutput ,printerFunction = stub.stubPrintToConsole)
         sender.sendData()
-        # self.assertTrue(stub.callCountStubDataGenerator == 1)
-        # self.assertTrue(stub.callCountStubOutputFormatter == 1)
-        # self.assertTrue(stub.callCountStubDataGenerator == 1)
-        print(stub.callCountStubDataGenerator)
+        self.assertTrue(stub.callCountStubDataGenerator == 50)
+        self.assertTrue(stub.callCountStubOutputFormatter == 50)
+        self.assertTrue(stub.callCountStubDataGenerator == 50)
+        print("callCountStubDataGenerator:",stub.callCountStubDataGenerator)
+        print("callCountStubOutputFormatter:",stub.callCountStubOutputFormatter)
+        print("callCountStubDataGenerator:",stub.callCountStubDataGenerator)
 if __name__ == '__main__':
     unittest.main()
