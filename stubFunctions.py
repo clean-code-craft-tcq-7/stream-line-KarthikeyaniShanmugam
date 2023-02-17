@@ -3,7 +3,7 @@ class StubCode:
         self.callCountStubDataGenerator = 0
         self.callCountStubOutputFormatter = 0
         self.callCountStubPrintToConsole = 0
-    def stubDataGenerator(self):
+    def generateBatteryData(self):
         self.callCountStubDataGenerator += 1
         return {'SOC':30,'T':35}
 

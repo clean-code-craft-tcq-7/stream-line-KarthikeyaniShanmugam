@@ -2,9 +2,9 @@ from ConsolePrinter import printToConsole
 from DataGenerator import DataGenerator
 from OutputFormatter import OutputFormatter
 class Sender:
-    def __init__(self,generatorFunction = DataGenerator() ,formatterFunction = OutputFormatter() ,printerFunction = printToConsole):
+    def __init__(self,generator = DataGenerator ,formatterFunction = OutputFormatter() ,printerFunction = printToConsole):
         self.dataStreamCount = 50
-        self.generator = generatorFunction
+        self.generator = generator
         self.formatter = formatterFunction
         self.printerFunction = printerFunction
     def sendData(self):
