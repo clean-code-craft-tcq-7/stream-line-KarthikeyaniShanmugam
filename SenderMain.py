@@ -10,10 +10,7 @@ class Sender:
         for i in range(0,self.dataStreamCount):
             generatedDict = generator.generateBatteryData()
             JsonString = formatter.formatOutput(generatedDict)
-            printToConsole(JsonString)
-
-
-
+            printToConsole(JsonString.encode())
 if __name__ == "__main__":
     sender = Sender()
     sender.sendData()

@@ -1,2 +1,3 @@
-def printToConsole(jsonString):
-    print(jsonString)
+import subprocess
+def printToConsole(jsonString):    
+    subprocess.run(['python', 'ReceiverMain.py'], input=jsonString)
