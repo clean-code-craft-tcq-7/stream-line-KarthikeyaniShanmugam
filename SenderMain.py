@@ -2,7 +2,7 @@ from ConsolePrinter import printToConsole
 from DataGenerator import DataGenerator
 from OutputFormatter import OutputFormatter
 class Sender:
-    def __init__(self,generatorFunction = DataGenerator.generateBatteryData,formatterFunction= OutputFormatter.formatOutput,printerFunction=printToConsole):
+    def __init__(self,generatorFunction,formatterFunction,printerFunction):
         self.dataStreamCount = 50
         self.generatorFunction = generatorFunction
         self.formatterFuntion = formatterFunction
@@ -13,5 +13,5 @@ class Sender:
             JsonString = self.formatterFuntion(generatedDict)
             self.printerFunction(JsonString.encode())
 if __name__ == "__main__":
-    sender = Sender()
-    sender.sendData(generatorFunction = DataGenerator.generateBatteryData,formatterFunction= OutputFormatter.formatOutput,printerFunction=printToConsole)
+    sender = Sender(generatorFunction = DataGenerator().generateBatteryData,formatterFunction= OutputFormatter().formatOutput,printerFunction=printToConsole)
+    sender.sendData()
