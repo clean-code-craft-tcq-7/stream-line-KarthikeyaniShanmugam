@@ -8,7 +8,7 @@ class StubCode:
         return {'SOC':30,'T':35}
 
     def formatOutput(self,input_data):
-        self.callStubOutputFormatter += 1
+        self.callCountStubOutputFormatter += 1
         return input_data
     
     def stubPrintToConsole(self,input_data):
