@@ -5,7 +5,7 @@ from SenderMain import *
 class SenderMainTester(unittest.TestCase):
     def test(self):  
         stub = StubCode()
-        sender = Sender(generator = stub ,formatterFunction = stub.stubOutputFormatter ,printerFunction = stub.stubPrintToConsole)
+        sender = Sender(generator = stub ,formatter = stub ,printerFunction = stub.stubPrintToConsole)
         sender.sendData()
         self.assertTrue(stub.callCountStubDataGenerator == 1)
         self.assertTrue(stub.callCountStubOutputFormatter == 1)
