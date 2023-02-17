@@ -1,3 +1,4 @@
+import json
 class StubCode:
     def __init__(self):
         self.callCountStubDataGenerator = 0
@@ -9,8 +10,9 @@ class StubCode:
 
     def formatOutput(self,input_data):
         self.callCountStubOutputFormatter += 1
-        return input_data
+        return json.dumps(input_data)
     
     def stubPrintToConsole(self,input_data):
         self.callCountStubPrintToConsole += 1
+
 
